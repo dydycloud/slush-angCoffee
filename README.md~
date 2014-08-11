@@ -25,10 +25,16 @@ Run the generator from within the new folder:
 $ cd my-slush-slush-angcoffee && slush slush-angcoffee
 ```
 
-Lucnh app after gena:
+Starting the app:
 
 ```bash
-$ cd my-slush-slush-angcoffee && slush slush-angcoffee
+$ gulp serve
+```
+
+Compile coffescript:
+
+```bash
+$ gulp watchCoff
 ```
 ## Getting To Know Slush
 
