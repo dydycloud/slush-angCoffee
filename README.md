@@ -1,6 +1,6 @@
 # slush-angCoffee 
 <img style="-webkit-user-select: none" src="https://avatars3.githubusercontent.com/u/1506617?v=2&amp;s=200">
-> geneartor angular coffee
+> generator angular coffee firebase
 
 
 ## Getting Started
