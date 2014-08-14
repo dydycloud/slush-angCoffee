@@ -17,7 +17,7 @@ gulp.task 'coffee', ->
   .on('error', gutil.log)
 
 gulp.task 'scripts', ->
-  gulp.src(['assets/js/script/app.js', 'assets/js/script/config.js', 'assets/js/script/Services/*.Service.js','assets/js/script/Factories/*.Factory.js','assets/js/script/Ctrl/*.Ctrl.js'])
+  gulp.src(['assets/js/script/app.js', 'assets/js/script/config.js', 'assets/js/script/**/*.js'])
     .pipe(concat('script.js'))
     .pipe(gulp.dest('assets/js'))
 

@@ -1,9 +1,12 @@
 angular.module("app", [
   "ngMaterial"
   "ui.router"
-  "myApp.config"
+  "mnk.config"
+  "mnk.service.auth"
+  "mnk.controller.auth"
+  "firebase"
 ])
-.controller("AppCtrl", ($scope, $location, $timeout, $materialSidenav) ->
+.controller("AppCtrl", ($scope, $location, $timeout, $materialSidenav, Auth) ->
   leftNav = undefined
   $timeout ->
     leftNav = $materialSidenav("left")
@@ -12,8 +15,9 @@ angular.module("app", [
     leftNav.toggle()
 
   $scope.register = ->
-    console.log 'yo'
-    $location.path "/"
+    Auth.register($scope.user).then (authUser) ->
+      console.log authUser
+      $location.path "/"
 )
 .controller("LeftCtrl", ($scope, $timeout, $materialSidenav) ->
   nav = undefined
@@ -24,6 +28,10 @@ angular.module("app", [
   $scope.close = ->
     nav.close()
     return
+
+  $scope.logout = ()->
+    Auth.logout()
+    console.log "you're out"
 
   return
 )

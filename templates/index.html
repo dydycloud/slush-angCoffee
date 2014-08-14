@@ -34,6 +34,7 @@
           <li><a ui-sref="home">Home</a></li>
           <li><a ui-sref="signup">Sign Up</a></li>
           <li><a ui-sref="signin">Sign In</a></li>
+          <li><a href="#" ng-click="logout()">Logout</a></li>
         </ul>
         <button class="material-button" ng-click="close()"><i class="glyphicon glyphicon-remove"></i> Close</button>
       </div>
@@ -42,11 +43,17 @@
 
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="assets/libs/angular/angular.min.js"></script>
+    
+    <script src="assets/libs/angular/angular.js"></script>
+    <script src="assets/libs/angular-ui-router/angular-ui-router.min.js"></script>
+    <script src="assets/libs/angular/firebase.js"></script>
+    <script src="https://cdn.firebase.com/js/simple-login/1.6.2/firebase-simple-login.js"></script>
+    <script src="assets/libs/angular/angularfire.min.js"></script>
     <script src="assets/libs/angular/angular-animate.min.js"></script>
     
-    <script src="assets/libs/angular-ui-router/angular-ui-router.min.js"></script>
     <script src="assets/js/docs.js"></script>
+
+
     <script src="assets/js/script.js"></script>
   </body>
 </html>

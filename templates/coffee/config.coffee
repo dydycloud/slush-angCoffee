@@ -1,5 +1,5 @@
 # Declare app level module which depends on filters, and services
-angular.module "myApp.config", []
+angular.module "mnk.config", []
 
 # establish authentication
 
@@ -18,11 +18,6 @@ angular.module "myApp.config", []
         templateUrl: "views/home.html"
         controller: 'AppCtrl'
       )
-      .state('signin',
-        url: "/signin"
-        templateUrl: "views/signin.html"
-        controller: 'AppCtrl'
-      )
       .state('signup',
         url: "/signup"
         templateUrl: "views/signup.html"
@@ -32,4 +27,4 @@ angular.module "myApp.config", []
 
 # your Firebase URL goes here
 # should look something like: https://blahblahblah.firebaseio.com
-.constant "FIREBASE_URL", "https://mnklab.firebaseio.com/"
+.constant "FIREBASE_URL", "https://mnkgeneral.firebaseio.com/"

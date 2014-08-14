@@ -1,13 +1,9 @@
-angular.module("myApp.config", []).config([
+angular.module("mnk.config", []).config([
   "$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
     $urlRouterProvider.otherwise("/");
     return $stateProvider.state('home', {
       url: "/",
       templateUrl: "views/home.html",
-      controller: 'AppCtrl'
-    }).state('signin', {
-      url: "/signin",
-      templateUrl: "views/signin.html",
       controller: 'AppCtrl'
     }).state('signup', {
       url: "/signup",
@@ -15,4 +11,4 @@ angular.module("myApp.config", []).config([
       controller: 'AppCtrl'
     });
   }
-]).constant("FIREBASE_URL", "https://mnklab.firebaseio.com/");
+]).constant("FIREBASE_URL", "https://mnkgeneral.firebaseio.com/");
